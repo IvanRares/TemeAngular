@@ -1,0 +1,40 @@
+<button nz-button nzType="primary" (click)="openAddModal()">Add</button>
+
+<nz-table
+  #table
+  [nzData]="data"
+  [nzPageSize]="8"
+>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Grade 1</th>
+      <th>Grade 2</th>
+      <th>Grade 3</th>
+      <th>Average</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of table.data">
+      <td>{{ item.name }}</td>
+      <td>{{ item.grade1 }}</td>
+      <td>{{ item.grade2 }}</td>
+      <td>{{ item.grade3 }}</td>
+      <td>{{ item.average | number: '1.0-2'}}</td>
+      <td>
+        <span
+            nz-icon
+            nzType="edit"
+            nzTheme="outline"
+            (click)="openEditModal(item)"
+          ></span>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+
+<app-modal-form
+  [isVisible]="isModalVisible"
+  (modalClosed)="handleModalClose($event)"
+></app-modal-form>

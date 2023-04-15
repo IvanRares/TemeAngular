@@ -1,0 +1,68 @@
+<nz-modal
+  [(nzVisible)]="isVisible"
+  nzTitle="Add/Edit Item"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="handleSubmit()"
+>
+  <ng-container *nzModalContent>
+    <form [formGroup]="itemForm">
+      <nz-form-item>
+        <nz-form-label>Name</nz-form-label>
+        <nz-form-control [nzErrorTip]="nameErrorTip" nzHasFeedback>
+          <input nz-input formControlName="name" />
+          <ng-template #nameErrorTip let-control>
+            <div *ngIf="control['errors'].required">Name is required</div>
+            <div *ngIf="control['errors'].lessThanTwoWords">
+              Name should have at least 2 words
+            </div>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>Grade 1</nz-form-label>
+        <nz-form-control [nzErrorTip]="grade1ErrorTip" nzHasFeedback>
+          <input type="number" nz-input formControlName="grade1" />
+          <ng-template #grade1ErrorTip let-control>
+            <div *ngIf="control['errors'].required">Grade 1 is required</div>
+            <div *ngIf="control['errors'].min">
+              Grade 1 has to be bigger or equal to 1
+            </div>
+            <div *ngIf="control['errors'].max">
+              Grade 1 has to be smaller or equal to 10
+            </div>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>Grade 2</nz-form-label>
+        <nz-form-control [nzErrorTip]="grade2ErrorTip" nzHasFeedback>
+          <input type="number" nz-input formControlName="grade2" />
+          <ng-template #grade2ErrorTip let-control>
+            <div *ngIf="control['errors'].required">Grade 2 is required</div>
+            <div *ngIf="control['errors'].min">
+              Grade 2 has to be bigger or equal to 1
+            </div>
+            <div *ngIf="control['errors'].max">
+              Grade 2 has to be smaller or equal to 10
+            </div>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>Grade 3</nz-form-label>
+        <nz-form-control [nzErrorTip]="grade3ErrorTip" nzHasFeedback>
+          <input type="number" nz-input formControlName="grade3" />
+          <ng-template #grade3ErrorTip let-control>
+            <div *ngIf="control['errors'].required">Grade 3 is required</div>
+            <div *ngIf="control['errors'].min">
+              Grade 3 has to be bigger or equal to 1
+            </div>
+            <div *ngIf="control['errors'].max">
+              Grade 3 has to be smaller or equal to 10
+            </div>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </ng-container>
+</nz-modal>
