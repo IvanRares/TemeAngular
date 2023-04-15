@@ -1,0 +1,3 @@
+<app-discover-banner [location]="currentLocation" (buttonClickedEvent)="scrollToPopularLocations()"></app-discover-banner>
+<app-destination-search></app-destination-search>
+<app-most-popular (selectedLocationEvent) = "currentLocation = $event" #popularLocations></app-most-popular>

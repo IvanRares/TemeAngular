@@ -1,0 +1,17 @@
+<div class="banner">
+  <div class="content">
+    <h3>DISCOVER THE COLORFUL WORLD</h3>
+    <h1 *ngIf="location; else defaultText">{{location}}</h1>
+    <ng-template #defaultText>
+        <h1>new adventure</h1>
+    </ng-template>
+    <hr />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
+    <button class="discover-btn" (click)="onClick()">DISCOVER NOW</button>
+  </div>
+</div>

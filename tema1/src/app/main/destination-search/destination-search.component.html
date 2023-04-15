@@ -1,0 +1,10 @@
+<div class="destination-search">
+    <label for="city-search" class="search-label">Search & Book all our destinations</label>
+    <input type="text" id="city-search" placeholder="Select your city" />
+    <h1>OUR SERVICES</h1>
+    <hr />
+    <div class="articles-container">
+      <app-article-card *ngFor="let article of articleArray" [article]="article"></app-article-card>
+    </div>
+  </div>
+  

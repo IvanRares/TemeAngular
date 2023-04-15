@@ -1,0 +1,39 @@
+.popular-locations {
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(235, 235, 235);
+  }
+  
+  .pagination-buttons {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  
+  .pagination-buttons button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin: 10px 5px;
+    background-color: rgb(235, 235, 235);
+  }
+  
+  h2 {
+    color: lightgreen;
+  }
+  
+  hr {
+    border: 1px solid lightgray;
+    width: auto;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .locations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  

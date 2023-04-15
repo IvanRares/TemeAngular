@@ -1,0 +1,27 @@
+.article-card {
+  box-sizing: border-box;
+  width: 500px;
+  padding: 20px;
+  margin: 0 10px 20px;
+  text-align: left;
+}
+
+h2 {
+  color: lightgreen;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.article-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.article-text {
+  color: gray;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

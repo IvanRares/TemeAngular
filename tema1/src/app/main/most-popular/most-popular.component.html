@@ -1,0 +1,17 @@
+<div class="popular-locations">
+  <div class="pagination-buttons">
+    <button (click)="previousPage()" [disabled]="pageIndex === 0"><</button>
+    <button (click)="nextPage()" [disabled]="pageIndex === totalPages - 1">
+      >
+    </button>
+  </div>
+  <h2>MOST POPULAR</h2>
+  <hr />
+  <div class="locations-container">
+    <app-location-card
+      *ngFor="let location of paginatedLocations"
+      [location]="location"
+      (selectedLocationEvent)="selectedLocationEvent.emit($event)"
+    ></app-location-card>
+  </div>
+</div>
